@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập từ ENG <input type="text" id="string"></label>
+<button onclick="dich()">Dịch</button>
+<p id="kq">Tiếng Vệt: </p>
+
+<script>
+    function dich() {
+        let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
+        let arr_vie = ["chuối", "táo", "cam", "but", "but chì", "sách"];
+        let string = document.getElementById('string').value;
+        let index_eng = 0;
+        let result = "";
+
+
+        for (let i = 0; i < arr_eng.length; i++) {
+            if (string == arr_eng[i]) {
+                index_eng = i;
+                for (let j = 0; j < arr_vie.length; j++) {
+                    if (index_eng == j) {
+                        result = arr_vie[j];
+                    }
+                }
+            } else {
+                document.getElementById('kq').innerHTML = "Không có trong từ điểm";
+            }
+
+        }
+        document.getElementById('kq').innerHTML =`Tiếng Việt: ${result}`;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // Bài 1:
+
+    /*let myColor = ["Red", "Green", "White", "Black"];
+    noi = myColor.join();
+    console.log(noi);
+    document.write(noi);*/
+
+
+    // Bài 2:
+    /*
+       let num = prompt('Enter number');
+       let str = num.toString();
+       let a = [str[0]];
+       for (let i = 0; i < str.length; i++) {
+           if ( (str[i] % 2 === 0) && (str[ i + 1] % 2===0)) {
+               a.push('-', str[i+1]);
+           } else {
+               a.push(str[i+1]);
+           }
+       }
+        console.log(a.join(''))
+        */
+
+    //Bài 3:
+
+
+    let str = prompt('Enter the lettel');
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lower = 'abcdefghijklmnopqrstuvwxyz';
+    let kq = [];
+    for (let i = 0; i < str.length; i++) {
+        if (UPPER.indexOf(str[i]) !== -1) {
+            kq.push(str[i].toLowerCase());
+        } else if (lower.indexOf(str[i]) !== -1) {
+            kq.push(str[i].toUpperCase());
+        } else {
+            kq.push(str[i]);
+        }
+    }
+    console.log(kq.join(''));
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
